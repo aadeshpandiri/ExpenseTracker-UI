@@ -22,6 +22,7 @@ import toast from "react-hot-toast";
 import dayjs from "dayjs";
 import LineChart from "../components/charts/LineChart";
 import PieChart from "../components/charts/PieChart";
+import { Prev } from "react-bootstrap/esm/PageItem";
 const today = new Date();
 const MONTHS = [
     'January',
@@ -44,6 +45,7 @@ export default function LandingPage(props) {
 
   const {token,handleLogout,setLoader}=useContext(sharedContext)
   const [message,setMessage]=useState('')
+  const [flag,setFlag]=useState(false)
   const [categories,setCategories]=useState();
   const [newBudget,setNewBudget]=useState({
     amount:'',
@@ -243,6 +245,7 @@ fetch(`${baseurl.url}/expenses/addBudget`, requestOptions)
       console.log(result)
       if(result.status===200){
         handleClose()
+        setFlag(Prev=>!Prev)
         toast.success(result.message)
 
       }else if(result.status===400){
@@ -279,6 +282,8 @@ fetch(`${baseurl.url}/expenses/editBudget`, requestOptions)
       console.log(result)
       
       setMessage('')
+      setFlag(Prev=>!Prev)
+      // window.location.reload();
       handleClose()
     })
 		.catch(error => {console.log('error', error)
@@ -360,7 +365,7 @@ useEffect(()=>{
            })
            .catch(error => console.log('error', error));
          }
-     },[token,EditBudget])
+     },[token,flag])
 
 
     //  chartdata
@@ -380,7 +385,7 @@ useEffect(()=>{
       >
 
         <DialogContent dividers={true} sx={{ padding: 0 }}>
-          <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div>
 
             <DialogContentText
               id="scroll-dialog-description"
