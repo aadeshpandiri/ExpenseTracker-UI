@@ -1,0 +1,234 @@
+/* Login.css */
+
+/* General styles */
+.Login__container {
+  /* width: 1920px; */
+  height: 100vh;
+  overflow-y: scroll;
+  background: #141414;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  /* margin-bottom: 50px; */
+  justify-content: center;
+}
+
+.logo-img-top {
+  position: relative;
+  margin: 0 auto;
+  width: 295px;
+  height: 56px;
+  top: 83px;
+  left: 0px;
+}
+/* .Login_first_section {
+  position: absolute;
+  left: 500px;
+  top: 83px;
+  flex-shrink: 0;
+}
+
+.Login_first_section img {
+  width: 295px;
+  height: 56px;
+} */
+
+.Login__second__section {
+
+  position: relative;
+
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 30px;
+}
+
+.Login__second__section h1 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 26.393px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Login__second__section h5 {
+  color: #adadad;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Login__second__section hr {
+  width: 332.667px;
+  height: 0px;
+  flex-shrink: 0;
+  fill: #00567d;
+  border: 1px solid #ffce00;
+  stroke-width: 1px;
+  stroke: #ffce00;
+  color: #ffce00;
+}
+
+.Login__second__section input {
+  outline: none;
+  background-color: inherit;
+  border: none;
+  color: #ffce00;
+  border-bottom: solid 1px #bfbfbf;
+  padding: 0 0 5px 5px;
+}
+
+.input-cred {
+  width: 332.667px;
+}
+
+.text-cred {
+  margin-top: 50px;
+}
+/* .pass-cred {
+  margin-bottom: 50px;
+} */
+.login__option__logo {
+  display: flex;
+  gap: 20px;
+}
+
+.Button__login {
+  width: 314.442px;
+  height: 45px;
+  overflow: hidden;
+}
+
+.Button__login button {
+  background: transparent;
+  position: relative;
+  top: 0px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  height: 45.693px;
+  z-index: 1;
+}
+
+.Button__login h3 {
+  width: 39px;
+  height: 18px;
+  flex-shrink: 0;
+  background: transparent;
+  color: #030303;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  z-index: 100;
+  position: relative;
+  top: -33px;
+  left: 135px;
+}
+
+/* Lottie animation container */
+.lottie-container {
+  background: transparent;
+  width: 415px;
+  height: 45px;
+  overflow: hidden;
+  position: relative;
+  top: -33px;
+  left: 135px;
+}
+
+.lottie-container .lottie-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.input__checkand__forgetpass {
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input__checkand__forgetpass input {
+  width: 150px;
+}
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the custom checkbox */
+label {
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  width: 14.185px;
+  height: 14.184px;
+  flex-shrink: 0;
+  border: 1px solid #f8f8f8;
+  border-radius: 5px;
+  cursor: pointer;
+  /* color: #bfbfbf;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; */
+  overflow: hidden;
+}
+.input__checkand__forgetpass h4 {
+  position: relative;
+  left: -50px;
+  color: #bfbfbf;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+/* Style the custom checkbox when checked */
+input[type="checkbox"]:checked + label::before {
+  content: "\2713"; /* Unicode checkmark symbol */
+  position: absolute;
+
+  top: -3px; /* Adjust the position of the checkmark */
+  left: 1px; /* Adjust the position of the checkmark */
+  font-size: 12px; /* Adjust the size of the checkmark */
+  color: #ffffff; /* Adjust the color of the checkmark */
+}
+
+.input__checkand__forgetpass a {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+.create__an_account {
+  text-decoration: none;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 14.104px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.Login__footer {
+  /* position: fixed;
+  top: 97%; */
+  color: #bfbfbf;
+  margin-top: 30px;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

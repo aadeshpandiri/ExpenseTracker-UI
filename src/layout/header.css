@@ -1,0 +1,51 @@
+.header-component {
+    display: flex;
+    align-items: center;
+   
+    justify-content: flex-start;
+
+    background-color: rgb(20, 20, 20);
+    gap:1.5rem;
+    padding: 40px;
+}
+
+.header-right-body {
+    color: #fff;
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+}
+
+.header-left {
+    /* padding-right: 60px;
+    padding-right: 60px; */
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 17.175px;
+}
+
+.notification-bill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.bottom-icons{
+    display: none;
+}
+
+@media (max-width: 767px) {
+   .header-component{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 2;
+    padding: 20px;
+   border-top: 1px solid white;
+   justify-content: center;
+   gap: 1.2rem;
+   }
+   .header-component span{
+    font-size: smaller;
+   }
+  
+  }

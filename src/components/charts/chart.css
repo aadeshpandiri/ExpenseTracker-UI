@@ -1,0 +1,7 @@
+
+@media (min-width:778px) {
+    .responsiveChart{
+        width:600px;
+        height: 400px;
+    }
+}

@@ -1,0 +1,33 @@
+.layout{
+    display: flex;
+    /* background: rgb(20, 20, 20); */
+    height: 100vh;
+}
+@media (max-width:767px) {
+    .layout{
+        height: 100%;
+    }
+}
+
+.applayout{
+    display: flex;
+  
+}
+.app-body{
+    width: 100%;
+    padding-left: 15rem;
+    height: 100vh;
+    /* display: flex; */
+    overflow: scroll;
+    flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .app-body{
+    flex-direction: column;
+    padding-left: 0px;
+    max-width: 100%;
+    /* height: auto; */
+  }
+  
+}

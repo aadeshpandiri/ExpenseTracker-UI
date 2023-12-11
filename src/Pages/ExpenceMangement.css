@@ -1,0 +1,81 @@
+.chartBox{
+    /* width: 700px; */
+    padding: 20px;
+    border-radius: 20px;
+    /* border:2px solid red; */
+
+}
+.container{
+    height: 400px;
+  
+    /* padding-left: 50px; */
+    /* border:2px solid blue; */
+    overflow-x: scroll;
+}
+
+.PayrollCard {
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: white;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+  }
+  
+  .PayrollCard h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .prDeatails__Box,
+  .prFields__Box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .prDeatails__Fld {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .prDeatails__Fld .colon {
+    font-size: 20px;
+  }
+  
+  .prDeatails__Fld p {
+    flex: 1;
+  }
+  
+  .nText__Fld {
+    flex: 3;
+  }
+  
+  .payrollAdd__Btn {
+    text-align: right;
+  }
+  .payrollSub__Btn {
+    text-align: center;
+  }
+  
+  .details__Fld {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .recPage_buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .recPage_buttons button {
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+  }
