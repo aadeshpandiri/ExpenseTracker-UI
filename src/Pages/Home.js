@@ -42,6 +42,7 @@ export default function LandingPage(props) {
   const navigate = useNavigate();
   const labels = MONTHS;
   const [isOpen, setDialog] = useState(false);
+  const [id, setId] = useState();
 
   const {token,handleLogout,setLoader}=useContext(sharedContext)
   const [message,setMessage]=useState('')
@@ -249,7 +250,8 @@ fetch(`${baseurl.url}/expenses/addBudget`, requestOptions)
         toast.success(result.message)
 
       }else if(result.status===400){
-        setMessage(result.message)
+        setMessage(result.message.error)
+        setId(result.message.id);
       }
      
     })
@@ -260,13 +262,13 @@ fetch(`${baseurl.url}/expenses/addBudget`, requestOptions)
   }
   const EditBudget=()=>{
     console.log('edit',newBudget,budget)
-    if(newBudget?.amount&&newBudget?.month&& newBudget?.year){
+    if(newBudget?.amount&&newBudget?.month&& newBudget?.year&&id){
       var myHeaders = new Headers();
 myHeaders.append("Authorization", `Bearer ${sessionStorage.getItem('access_token')}`);
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({...newBudget,
-  id:budget[0]?.id
+  id:id
 });
 
 var requestOptions = {

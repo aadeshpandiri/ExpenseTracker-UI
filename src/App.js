@@ -12,7 +12,7 @@ function App() {
     <Router>
 
     {
-      tokenData ?  <SharedState> <AppLayout /></SharedState> : <Registration />
+      tokenData ?  <SharedState> <AppLayout /> </SharedState> : <SharedState><Registration /> </SharedState> 
     }
     {/* <AppLayout /> */}
   </Router>

@@ -5,12 +5,18 @@ import Snackbar from '@mui/material/Snackbar';
 import { Button, IconButton } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { baseurl } from "../utils/constant";
+import sharedContext from "../../context/SharedContext";
+import { useContext } from "react";
+import Loader from "../Loader";
+
 
 const SignUp = () => {
 
 
   const [open, setOpen] = React.useState(false);
   const [meassage,setMessage] = useState("")
+  const {setLoader}=useContext(sharedContext)
+
 
 
   const [isSubmitting, setIsSubmitting] = useState(true);
@@ -116,6 +122,7 @@ const SignUp = () => {
         body: raw,
         redirect: 'follow'
       };
+      setLoader(true);
   
       fetch(`${baseurl.url}/auth/register`, requestOptions)
       .then((res)=>{
@@ -134,11 +141,13 @@ const SignUp = () => {
           setMessage(res.message)
           setIsSubmitting(true)
         }
+        setLoader(false);
       })
   
     } catch (error) {
       console.log("Error:", error);
       setIsSubmitting(true)
+      setLoader(false);
     }
 
   }
@@ -178,7 +187,7 @@ const SignUp = () => {
   return (
     <div className="SignUp__container">
       {/* <img className="logo-img-top" src={Logo} alt="logo" /> */}
-
+      <Loader/>
       <div className="SignUp__second__section">
         <h1>Sign up!</h1>
         <h5>See your growth and get consulting support!</h5>
